@@ -1,0 +1,11 @@
+<div
+  role="button"
+  {{did-insert this.doAnimation}}
+>
+</div>
+
+{{#if @direction}}
+	<div {{did-insert (fn this.click 1)}} />
+{{else}}
+	<div {{did-insert (fn this.click -1)}} />
+{{/if}}
