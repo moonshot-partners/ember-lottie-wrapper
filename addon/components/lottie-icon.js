@@ -4,6 +4,15 @@ import { isPresent } from '@ember/utils';
 
 export default class LottieIconComponent extends Component {
   defaultSpeed = 1;
+  defaultTotalFrames = 0;
+
+  get totalFrames() {
+    return this.args.totalFrames || this.defaultTotalFrames;
+  }
+
+  get animationSpeed() {
+    return this.args.speed || this.defaultSpeed;
+  }
 
   @action
   async doAnimation(element) {
@@ -16,7 +25,11 @@ export default class LottieIconComponent extends Component {
         path: this.args.path
       });
 
-      animation.setSpeed(this.args.speed || this.defaultSpeed);
+      if (this.args.direction) {
+        animation.goToAndStop(this.totalFrames, true);
+      }
+
+      animation.setSpeed(this.animationSpeed);
       return animation;
     });
   }

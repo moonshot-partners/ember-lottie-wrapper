@@ -1,0 +1,8 @@
+<div {{on "click" this.likeToogle}}>
+	<LottieIcon
+		@path="/lottie-files/like.json"
+		@speed="6"
+		@direction={{this.isLike}}
+		@totalFrames={{50}}
+	/>
+</div>
