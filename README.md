@@ -1,8 +1,7 @@
 ember-lottie-wrapper
 ==============================================================================
 
-[Short description of the addon.]
-
+It's a simple [lottie](https://airbnb.io/lottie/#/) wrapper for ember.
 
 Compatibility
 ------------------------------------------------------------------------------
@@ -11,7 +10,6 @@ Compatibility
 * Ember CLI v2.13 or above
 * Node.js v10 or above
 
-
 Installation
 ------------------------------------------------------------------------------
 
@@ -19,11 +17,16 @@ Installation
 ember install ember-lottie-wrapper
 ```
 
-
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+## LottieIcon component basic ussage
+
+```javascript
+<LottieIcon path="https://assets1.lottiefiles.com/packages/lf20_fiAiH4.json" speed="6"/>
+```
+
+`speed` default is 1 in case you skip this argument.
 
 
 Contributing
